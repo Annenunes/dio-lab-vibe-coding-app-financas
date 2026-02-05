@@ -1,110 +1,335 @@
-# 💸 App de Finanças Pessoais da Ediane com Vibe Coding
+# 💸 App de Faturamento da Ediane com Vibe Coding
 
-Este projeto foi desenvolvido como um Desafio de Projeto da DIO de Vibe Coding utilizando o Lovable e o Copilot Web. A proposta é criar um aplicativo de organização financeira pessoal baseado em interações em linguagem natural.
+Este projeto foi desenvolvido como um Desafio de Projeto da DIO de Vibe Coding utilizando o Lovable e o Copilot Web. A proposta é criar um aplicativo com foco em controle financeiro básico para pequenos empreendedores,  baseado em interações em linguagem natural.
 
 ---
 
 ## 📝 PRD Refinado no Copilot Web
 
 ```markdown
-# PRD - App de Organização Financeira com Conversa Natural
+# PRD - App de fanturamento com Conversa Natural
 
-## Visão Geral
-Criar um aplicativo de organização de finanças pessoais que funcione por meio de conversas em linguagem natural.  
-O objetivo é tornar o controle financeiro mais intuitivo, acessível e livre de burocracias como planilhas ou formulários complexos.
+Crie um APLICATIVO DE FATURAMENTO para uma lojinha de cosméticos, com foco em controle financeiro básico, vendas e lucro. 
+O app deve ser pensado para uma pequena empreendedora, sem conhecimento técnico, com interface intuitiva, clara e agradável.
 
-## Problema a Resolver
-Muitas pessoas abandonam o controle financeiro por acharem os aplicativos atuais complicados, exigindo entradas manuais e oferecendo pouca personalização.  
-Queremos resolver isso com uma experiência conversacional fluida e recomendações automáticas que se adaptam ao perfil do usuário.
+REQUISITOS GERAIS:
+- Aplicativo web responsivo (funciona bem em celular e computador)
+- Visual feminino, moderno e limpo
+- Linguagem simples (português do Brasil)
+- Fluxo fácil, poucos cliques
+- Pensado para uso diário
 
-## Público-Alvo
-Pessoas que desejam começar a organizar suas finanças de forma prática e sem complicações — especialmente iniciantes que não têm familiaridade com apps financeiros tradicionais.
+FUNCIONALIDADES PRINCIPAIS:
 
-## Funcionalidades-Chave
-1. Registro de gastos via chat: O usuário descreve seus gastos em linguagem natural, como “gastei R$ 30 no mercado”.
-2. Classificação automática de transações: O app identifica e categoriza os gastos com base no texto.
-3. Definição e acompanhamento de metas financeiras: O usuário pode criar metas como “economizar R$ 500 até o fim do mês”.
-4. Dicas personalizadas do Agente Financeiro: Um assistente virtual que sugere formas de economizar com base nos hábitos do usuário.
-5. Relatórios simples e personalizados: Visualizações claras dos gastos, metas e progresso, adaptadas ao estilo do usuário.
+1. LOGIN (opcional, mas recomendado)
+- Login simples por email e senha
+- Cada usuário vê apenas seus próprios dados
 
-## Princípio de Design Universal
-A solução será construída com base em Design Universal, garantindo que o aplicativo ofereça uma experiência acessível, intuitiva e inclusiva para o maior número possível de pessoas — independentemente de idade, nível de alfabetização digital, limitações físicas ou cognitivas.  
-Isso inclui:
-- Interface clara e legível
-- Navegação simples e sem sobrecarga de informações
-- Compatibilidade com leitores de tela e comandos por voz
-- Feedbacks visuais e auditivos para facilitar o uso
+2. CADASTRO DE PRODUTOS
+Tela para cadastrar produtos com os seguintes campos:
+- Nome do produto
+- Categoria (ex: maquiagem, perfume, skincare)
+- Custo do produto
+- Preço de venda
+- Quantidade em estoque
 
-## Entregável da IA
-Gerar um plano de MVP contendo:
-- As principais telas (chat, metas, relatórios)
-- Recursos técnicos necessários (NLP, categorização automática, motor de recomendações)
-- Estratégia de validação inicial com usuários reais
-- Linguagem acessível e tom educativo, em português
-- Aplicação dos princípios de Design Universal desde o protótipo
-```
+Funcionalidades:
+- Listar produtos cadastrados
+- Editar produto
+- Excluir produto
+- Atualizar estoque automaticamente após venda
+
+3. REGISTRO DE VENDAS (TELA VISUAL)
+Tela principal de vendas contendo:
+- Seleção do produto
+- Quantidade vendida
+- Preço de venda (automático, mas editável)
+- Botão "Registrar Venda"
+
+Ao registrar uma venda:
+- Diminuir automaticamente o estoque
+- Calcular lucro da venda (preço de venda - custo)
+- Salvar data e hora da venda
+
+4. DASHBOARD (PAINEL PRINCIPAL)
+Painel visual com:
+- Faturamento total
+- Lucro total
+- Total de vendas realizadas
+- Produtos com estoque baixo
+- Resumo do dia e do mês
+
+5. HISTÓRICO DE VENDAS
+Tela com:
+- Lista de todas as vendas
+- Data, produto, quantidade, valor e lucro
+- Filtro por dia ou mês
+
+6. SALVAMENTO DE DADOS
+- Os dados devem ser persistentes
+- Pode usar armazenamento local ou banco simples
+- Dados não devem se perder ao fechar o app
+
+REQUISITOS DE INTERFACE:
+- Layout clean
+- Botões grandes
+- Ícones simples
+- Cores suaves (ex: rosa, lilás, bege ou tons neutros)
+- Menu inferior no celular
+- Menu lateral no computador
+
+OBJETIVO FINAL:
+Criar um app simples, confiável e prático que ajude uma lojinha de cosméticos a:
+- Controlar vendas
+- Saber quanto está faturando
+- Calcular lucro real
+- Evitar prejuízo
+- Organizar o negócio
 
 ---
 
 ## 💬 Interações com o Lovable
 
-> Crie um App de Finanças Pessoais com base no seguinte PRD (Product Requirements Document): {PRD}
+> Crie um App de Faturamento com base no seguinte PRD (Product Requirements Document): {PRD}
 
-> Tentei criar uma meta chamada Reserva de Emergencia, mas ela não apareceu no componente. A impressão que tive foi que apenas o Assistente Financeiro a reconheceu, poderia verificar? Além disso, onde vejo os gráficos e extrato?
-
-> Sim (Quer que eu adicione uma tela de relatórios com gráficos e extrato detalhado das transações?)
+> O lovable não apresentou nenhum problema, consegui criar tudo apenas com meu prompt!
 
 ---
 
 ## 🎯 Resultado Final
 
 Acesse o protótipo funcional no Lovable:  
-**[conversa-fin-amigo.lovable.app](https://conversa-fin-amigo.lovable.app/)**
+Você é um desenvolvedor especialista em criar aplicativos web simples, bonitos e funcionais para pequenos negócios.
 
-<img width="1920" height="945" alt="image" src="https://github.com/user-attachments/assets/88ef611d-970e-4377-918a-918714311218" />
+Crie um APLICATIVO DE FATURAMENTO para uma lojinha de cosméticos, com foco em controle financeiro básico, vendas e lucro. 
+O app deve ser pensado para uma pequena empreendedora, sem conhecimento técnico, com interface intuitiva, clara e agradável.
+
+REQUISITOS GERAIS:
+- Aplicativo web responsivo (funciona bem em celular e computador)
+- Visual feminino, moderno e limpo
+- Linguagem simples (português do Brasil)
+- Fluxo fácil, poucos cliques
+- Pensado para uso diário
+
+FUNCIONALIDADES PRINCIPAIS:
+
+1. LOGIN (opcional, mas recomendado)
+- Login simples por email e senha
+- Cada usuário vê apenas seus próprios dados
+
+2. CADASTRO DE PRODUTOS
+Tela para cadastrar produtos com os seguintes campos:
+- Nome do produto
+- Categoria (ex: maquiagem, perfume, skincare)
+- Custo do produto
+- Preço de venda
+- Quantidade em estoque
+
+Funcionalidades:
+- Listar produtos cadastrados
+- Editar produto
+- Excluir produto
+- Atualizar estoque automaticamente após venda
+
+3. REGISTRO DE VENDAS (TELA VISUAL)
+Tela principal de vendas contendo:
+- Seleção do produto
+- Quantidade vendida
+- Preço de venda (automático, mas editável)
+- Botão "Registrar Venda"
+
+Ao registrar uma venda:
+- Diminuir automaticamente o estoque
+- Calcular lucro da venda (preço de venda - custo)
+- Salvar data e hora da venda
+
+4. DASHBOARD (PAINEL PRINCIPAL)
+Painel visual com:
+- Faturamento total
+- Lucro total
+- Total de vendas realizadas
+- Produtos com estoque baixo
+- Resumo do dia e do mês
+
+5. HISTÓRICO DE VENDAS
+Tela com:
+- Lista de todas as vendas
+- Data, produto, quantidade, valor e lucro
+- Filtro por dia ou mês
+
+6. SALVAMENTO DE DADOS
+- Os dados devem ser persistentes
+- Pode usar armazenamento local ou banco simples
+- Dados não devem se perder ao fechar o app
+
+REQUISITOS DE INTERFACE:
+- Layout clean
+- Botões grandes
+- Ícones simples
+- Cores suaves (ex: rosa, lilás, bege ou tons neutros)
+- Menu inferior no celular
+- Menu lateral no computador
+
+OBJETIVO FINAL:
+Criar um app simples, confiável e prático que ajude uma lojinha de cosméticos a:
+- Controlar vendas
+- Saber quanto está faturando
+- Calcular lucro real
+- Evitar prejuízo
+- Organizar o negócio
+
+Gere o código ou estrutura completa do app seguindo essas instruções.
+Você é um desenvolvedor especialista em criar aplicativos web simples, bonitos e funcionais para pequenos negócios.
+
+Crie um APLICATIVO DE FATURAMENTO para uma lojinha de cosméticos, com foco em controle financeiro básico, vendas e lucro. 
+O app deve ser pensado para uma pequena empreendedora, sem conhecimento técnico, com interface intuitiva, clara e agradável.
+
+REQUISITOS GERAIS:
+- Aplicativo web responsivo (funciona bem em celular e computador)
+- Visual feminino, moderno e limpo
+- Linguagem simples (português do Brasil)
+- Fluxo fácil, poucos cliques
+- Pensado para uso diário
+
+FUNCIONALIDADES PRINCIPAIS:
+
+1. LOGIN (opcional, mas recomendado)
+- Login simples por email e senha
+- Cada usuário vê apenas seus próprios dados
+
+2. CADASTRO DE PRODUTOS
+Tela para cadastrar produtos com os seguintes campos:
+- Nome do produto
+- Categoria (ex: maquiagem, perfume, skincare)
+- Custo do produto
+- Preço de venda
+- Quantidade em estoque
+
+Funcionalidades:
+- Listar produtos cadastrados
+- Editar produto
+- Excluir produto
+- Atualizar estoque automaticamente após venda
+
+3. REGISTRO DE VENDAS (TELA VISUAL)
+Tela principal de vendas contendo:
+- Seleção do produto
+- Quantidade vendida
+- Preço de venda (automático, mas editável)
+- Botão "Registrar Venda"
+
+Ao registrar uma venda:
+- Diminuir automaticamente o estoque
+- Calcular lucro da venda (preço de venda - custo)
+- Salvar data e hora da venda
+
+4. DASHBOARD (PAINEL PRINCIPAL)
+Painel visual com:
+- Faturamento total
+- Lucro total
+- Total de vendas realizadas
+- Produtos com estoque baixo
+- Resumo do dia e do mês
+
+5. HISTÓRICO DE VENDAS
+Tela com:
+- Lista de todas as vendas
+- Data, produto, quantidade, valor e lucro
+- Filtro por dia ou mês
+
+6. SALVAMENTO DE DADOS
+- Os dados devem ser persistentes
+- Pode usar armazenamento local ou banco simples
+- Dados não devem se perder ao fechar o app
+
+REQUISITOS DE INTERFACE:
+- Layout clean
+- Botões grandes
+- Ícones simples
+- Cores suaves (ex: rosa, lilás, bege ou tons neutros)
+- Menu inferior no celular
+- Menu lateral no computador
+
+OBJETIVO FINAL:
+Criar um app simples, confiável e prático que ajude uma lojinha de cosméticos a:
+- Controlar vendas
+- Saber quanto está faturando
+- Calcular lucro real
+- Evitar prejuízo
+- Organizar o negócio
+
+Gere o código ou estrutura completa do app seguindo essas instruções.
+*** https://glow-sales-tracker.lovable.app ***
+
+<img width="1211" height="1165" alt="image" src="https://github.com/user-attachments/assets/69b18081-daa4-4cc0-a082-8eccaf9fe9b6" />
+
 
 ---
 
-## 🔍 Funcionalidades do App de Organização Financeira
+## 🔍 Funcionalidades do App de faturamento
 
-### 1. Dashboard Financeiro
-- Exibe um panorama claro das finanças pessoais:
-  - **Receitas**: Total de ganhos registrados
-  - **Despesas**: Total de gastos
-  - **Saldo**: Diferença entre receitas e despesas
-- Interface simples e direta para facilitar a compreensão
+### 1. LOGIN (opcional, mas recomendado)
+- Login simples por email e senha
+- Cada usuário vê apenas seus próprios dados
 
-### 2. Assistente Financeiro
-- Personagem conversacional que interage com o usuário
-- Incentiva a conexão de contas e cartões para uma visão completa das finanças
-- Oferece suporte emocional e motivacional
+2. CADASTRO DE PRODUTOS
+Tela para cadastrar produtos com os seguintes campos:
+- Nome do produto
+- Categoria (ex: maquiagem, perfume, skincare)
+- Custo do produto
+- Preço de venda
+- Quantidade em estoque
 
-### 3. Registro de Transações via Chat
-- Campo de entrada para o usuário digitar mensagens em linguagem natural
-- Permite registrar gastos e interagir com o assistente de forma fluida
+Funcionalidades:
+- Listar produtos cadastrados
+- Editar produto
+- Excluir produto
+- Atualizar estoque automaticamente após venda
 
-### 4. Metas Financeiras
-- Área dedicada à criação e acompanhamento de objetivos financeiros
-- Sugestão proativa para o usuário definir metas
-- Botão de ação para adicionar novas metas
+3. REGISTRO DE VENDAS (TELA VISUAL)
+Tela principal de vendas contendo:
+- Seleção do produto
+- Quantidade vendida
+- Preço de venda (automático, mas editável)
+- Botão "Registrar Venda"
 
-### 5. Relatórios Personalizados
-- Visualizações simples e adaptadas ao estilo do usuário
-- Acompanhamento de metas e progresso financeiro
+Ao registrar uma venda:
+- Diminuir automaticamente o estoque
+- Calcular lucro da venda (preço de venda - custo)
+- Salvar data e hora da venda
 
-### 6. Design Universal
-- Interface acessível e inclusiva:
-  - Linguagem simples
-  - Navegação clara
-  - Compatibilidade com leitores de tela e comandos por voz
-  - Feedbacks visuais e auditivos para facilitar o uso
+4. DASHBOARD (PAINEL PRINCIPAL)
+Painel visual com:
+- Faturamento total
+- Lucro total
+- Total de vendas realizadas
+- Produtos com estoque baixo
+- Resumo do dia e do mês
 
----
+5. HISTÓRICO DE VENDAS
+Tela com:
+- Lista de todas as vendas
+- Data, produto, quantidade, valor e lucro
+- Filtro por dia ou mês
+
+6. SALVAMENTO DE DADOS
+- Os dados devem ser persistentes
+- Pode usar armazenamento local ou banco simples
+- Dados não devem se perder ao fechar o app
+
+REQUISITOS DE INTERFACE:
+- Layout clean
+- Botões grandes
+- Ícones simples
+- Cores suaves (ex: rosa, lilás, bege ou tons neutros)
+- Menu inferior no celular
+- Menu lateral no computador
+
 
 ## 🧠 Reflexão
 
 ### O que funcionou bem?  
-O refinamento do PRD previamente feito no Copilot ajudou muito, pois os créditos do Lovable acabaram em apenas 3 interações.
+O refinamento do PRD previamente feito no Copilot ajudou muito, pois o tenho créditos limitados.
 
 ### O que não funcionou como o esperado?  
 Esperava poder interagir mais vezes gratuitamente com o Lovable, mas as interações feitas já foram de grande valia para aprender mais sobre Vibe Coding.
